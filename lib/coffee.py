@@ -3,21 +3,21 @@
 class Coffee:
     def __init__(self, size, price):
         # Initialize private variable for size
-        # (validation handled via setter)
+
         self._size = None
 
-        # Use setter to assign size (ensures validation)
+        # setter assigns size
         self.size = size
 
-        # Store price directly (no validation required per spec)
+        #Stores price directly
         self.price = price
 
-    # Getter method for size
+    # Getter method - size
     @property
     def size(self):
         return self._size
 
-    # Setter method for size with validation
+    # method for size with validation
     @size.setter
     def size(self, value):
         # Only allow specific size options
@@ -27,7 +27,7 @@ class Coffee:
             # Print error message if invalid
             print("size must be Small, Medium, or Large")
 
-    # Method to simulate tipping for the coffee
+    # Method to simulate tipping for coffee barista
     def tip(self):
         # Print appreciation message
         print("This coffee is great, here’s a tip!")
